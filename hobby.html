@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мої хобі</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Мої хобі</h1>
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="future.html">Моє майбутнє</a>
+        <a href="hobby.html">Мої хобі</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Мої захоплення</h2>
+    <p>Я люблю спорт, програмування та ігри.</p>
+</section>
+
+<section>
+    <h2>Відео</h2>
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/watch?v=29XymHesxa0"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<section>
+    <h2>Карусель фото</h2>
+    <div class="carousel">
+        <img src="https://downtownny.com/wp-content/uploads/2023/12/120423_bkbridge_1024x576.jpg" class="active">
+        <img src="https://cdn.britannica.com/94/167894-050-C7E2C482/Brooklyn-Bridge-East-River-New-York-City.jpg">
+        <img src="https://images.ctfassets.net/1aemqu6a6t65/7agXa8CmAoqIixMXCSiBFP/d7056bb920347a3078ccbd1bcba345a6/brooklyn-bridge-photo-julienne-schaer-nyc-and-company-003-2">
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Максим</p>
+</footer>
+
+<script>
+let index = 0;
+const images = document.querySelectorAll(".carousel img");
+
+setInterval(() => {
+    images[index].classList.remove("active");
+    index = (index + 1) % images.length;
+    images[index].classList.add("active");
+}, 2000);
+</script>
+
+</body>
+</html>
